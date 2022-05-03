@@ -71,7 +71,7 @@ const Calculator = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.row}>
-        <TouchableOpacity style={styles.dataButton}>
+        <TouchableOpacity style={[styles.dataButton, {flex:2, marginLeft: 1}]}>
           <Text style={styles.text}>0</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.dataButton}>
@@ -85,26 +85,49 @@ const Calculator = () => {
   );
 };
 
+const button = {
+  flex: 1,
+  justifyContent: "center",
+  alignItems: "center",
+  marginRight: 1,
+};
+
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: "column", // default
     justifyContent: "flex-start", //default
+    flex: 1,
+    backgroundColor: "#3D3A3A",
   },
-  row: {},
+  row: {
+    flexDirection: "row",
+    flex: 1,
+    marginBottom: 1,
+  },
   currentVal: {
-    color: "#fff"
+    flex: 1,
+    alignSelf: "center",
+    textAlign: "right",
+    fontSize: 50,
+    color: "#fff",
+    marginRight: 10,
   },
   modifierButton: {
+    ...button,
     backgroundColor: "#4D4B4B",
   },
   operatorButton: {
+    ...button,
     backgroundColor: "#FF9225",
   },
   dataButton: {
+    ...button,
     backgroundColor: "#696970",
   },
   text: {
     color: "#fff",
+    fontSize: 35,
   },
 });
 
