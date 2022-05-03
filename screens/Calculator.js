@@ -91,7 +91,9 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start", //default
   },
   row: {},
-  currentVal: {},
+  currentVal: {
+    color: "#fff"
+  },
   modifierButton: {
     backgroundColor: "#4D4B4B",
   },
